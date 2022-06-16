@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* global colors and values */
+:root {
+  --Orange: hsl(25, 97%, 53%);
+  /* neutral */
+
+  --White: hsl(0, 0%, 100%);
+  --LightGrey: hsl(217, 12%, 63%);
+  --MediumGrey: hsl(216, 12%, 54%);
+  --DarkBlue: hsl(213, 19%, 18%);
+  --VeryDarkBlue: hsl(216, 12%, 8%);
+}
+
+body {
+  background-color: var(--VeryDarkBlue);
+}
+
+h2 {
+  color: var(--White);
+  padding-bottom: 10px;
+}
+
+p {
+  color: var(--MediumGrey);
+  padding-bottom: 10px;
+}
+
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* main container */
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--DarkBlue);
+  /* padding: 20px 20px; */
+  border-radius: 12px;
+  width: 300px;
+  height: 300px;
+}
+/* content container */
+.container-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+/* img bg  */
+.img-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.img-bg::after {
+  content: " ";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-color: var(--VeryDarkBlue);
+  opacity: 0.2;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* numbers and hover and the select hidden class */
+.numbers-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.numbers-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  width: 200px;
+  margin-top: 20px;
+}
+.number {
+  padding: 10px 15px;
+  border-radius: 50%;
+  background-color: var(--VeryDarkBlue);
+  opacity: 0.4;
+  color: var(--LightGrey);
+  transition: 0.3s ease-in-out;
+}
+.number:hover {
+  background-color: var(--Orange);
+  color: white;
+  opacity: 1;
+}
+
+.selected {
+  background-color: var(--MediumGrey);
+  color: white;
+  opacity: 1;
+}
+
+/* submit btn and hover */
+.submit-btn {
+  margin-top: 30px;
+  padding: 5px 110px;
+  border-radius: 12px;
+  font-size: 15px;
+  background-color: var(--Orange);
+  color: var(--White);
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+  background-color: var(--White);
+  color: var(--VeryDarkBlue);
+}
+
+/* response container */
+.response-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--DarkBlue);
+  /* padding: 20px 20px; */
+  border-radius: 12px;
+  width: 300px;
+  height: 300px;
+  display: none;
+}
+/* display response */
+.response-display {
+  display: block;
+}
+
+/* response content align center */
+.response-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* adjusting img size */
+.response-img {
+  width: 100px;
+  margin-top: 20px;
+}
+
+/* main response from the submit event */
+.response {
+  margin-top: 20px;
+  color: var(--Orange);
+  margin-bottom: 10px;
+}
+.response::after {
+  content: " ";
+  position: absolute;
+  height: 24px;
+  width: 200px;
+  left: 50px;
+
+  z-index: -1;
+  opacity: 0.4;
+  border-radius: 12px;
+  background-color: var(--VeryDarkBlue);
+}
+.response-text {
+  margin: 20px;
+}
